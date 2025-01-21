@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --accent-lime: rgb(215, 218, 47);
+  --accent-lime-hover: rgba(215, 218, 47, 0.5);
+  --accent-lime-hover-radio: rgba(215, 218, 47, 0.15);
+  --accent-red: rgb(215, 51, 40);
+
+  --primary-black: rgb(18, 47, 63);
+  --primary-white: rgb(255, 255, 255);
+  --primary-gray-100: rgb(227, 243, 253);
+  --primary-gray-300: rgb(154, 190, 213);
+  --primary-gray-500: rgb(107, 148, 168);
+  --primary-gray-700: rgb(78, 110, 126);
+}
+
+/* TYPOGRAPHY */
+body {
+  font:
+    normal normal 16px/1.5 "Plus Jakarta Sans",
+    sans-serif;
+  color: var(--primary-gray-700);
+}
+
+/* Headings */
+h1 {
+  font:
+    normal bold 56px/1.25 "Plus Jakarta Sans",
+    sans-serif;
+  color: var(--primary-black);
+}
+
+h2 {
+  font:
+    normal bold 24px/1.25 "Plus Jakarta Sans",
+    sans-serif;
+}
+
+h3 {
+  font:
+    normal bold 18px/1.25 "Plus Jakarta Sans",
+    sans-serif;
+  display: inline-block;
+}
+
+h4 {
+  font:
+    normal bold 16px/1.5 "Plus Jakarta Sans",
+    sans-serif;
+}
+
+span.error {
+  font:
+    normal normal 14px/1.5 "Plus Jakarta Sans",
+    sans-serif;
+  color: var(--accent-red);
+  display: none;
+}
+
+label {
+  font:
+    normal normal 16px/1.5 "Plus Jakarta Sans",
+    sans-serif;
+  display: block;
+}
+
+label.bold {
+  font:
+    normal bold 18px/1.25 "Plus Jakarta Sans",
+    sans-serif;
+  display: inline-block;
+}
+
+/* Buttons */
+
+input {
+  border: 1px solid var(--primary-gray-500);
+  font:
+    normal bold 18px/1.25 "Plus Jakarta Sans",
+    sans-serif;
+  color: var(--primary-black);
+  padding: 16px 12.5px;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+button[type="button"] {
+  font:
+    normal bold 18px/1.25 "Plus Jakarta Sans",
+    sans-serif;
+  color: var(--primary-black);
+  width: 327px; /**HEIGHT IS DIFFERENT ALL THE TIME**/
+  height: 56px;
+  border: none;
+  background-color: var(--accent-lime);
+  border-radius: 30px; /**не понимаю каакой радиус у кнопок*/
+}
+
+button[type="button"]:hover {
+  background-color: var(--accent-lime-hover);
+}
+
+button[type="reset"] {
+width: 62px;
+  font:
+    normal normal 16px/1.5 "Plus Jakarta Sans",
+    sans-serif;
+  text-decoration: underline;
+  color: var(--primary-gray-700);
+  background-color: transparent;
+  border: none;
+}
+
+.radio-button {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid var(--primary-gray-500);
+  border-radius: 4px;
+  width: 100%;
+  padding: 16px 12.5px;
+  display: block;
+  text-align: start;
+  font:
+    normal bold 18px/1.25 "Plus Jakarta Sans",
+    sans-serif;
+  color: var(--primary-black);
+}
+
+.radio-button:hover {
+    background-color: var(--accent-lime-hover-radio);
+    border: 1px solid var(--accent-lime);
+}
+
+/* Inputs */
+input[type="radio"],
+input[type="number"] {
+  font:
+    normal bold 18px/1.25 "Plus Jakarta Sans",
+    sans-serif;
+  color: var(--primary-black);
+}
+
+input[type="number"]:focus {
+  border: 1px solid var(--accent-lime);
+  outline: none;
+}
+
+@media screen and (max-width: 500px) {
+  .mortgage-calculator {
+    width: 100%;
+    padding: 32px 24px;
+  }
+
+  input:not(type="radio"), button {
+    width: 100%;
+  }
+
+  button[type="button"] {
+    width: 100%;
+  }
+
+  .mortgage-calculator__header {
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font:
+      normal bold 40px/1.25 "Plus Jakarta Sans",
+      sans-serif;
+  }
+}
+
+.mortgage-calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    width: 50%;
+    padding: 32px 24px;
+}
+
+.mortgage-calculator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mortgage-calculator__field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.mortgage-calculator__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+input:not([type="radio"]) {
+  height: 48px;
+  width: 100%;
+}

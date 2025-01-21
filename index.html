@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800"
+      rel="stylesheet"
+    />
+    <script src="./index.js" defer></script>
+  </head>
+
+  <body>
+    <div class="mortgage-calculator">
+    <div class="mortgage-calculator__header">
+            <h2>Mortgage Calculator</h2>
+            <button type="reset">Clear all</button>
+          </div>
+      <div class="mortgage-calculator__form">
+        <form action="#" method="get">
+          <div class="mortgage-calculator__inputs">
+            <div class="mortgage-calculator__field">
+              <label for="amount"> Mortgage Amount </label>
+              <input type="number" name="amount" id="amount" />
+              <span class="error">This field is required</span>
+            </div>
+            <div class="mortgage-calculator__field">
+              <label for="term"> Mortgage Term </label>
+              <input type="number" name="term" id="term" />
+              <span class="error">This field is required</span>
+            </div>
+            <div class="mortgage-calculator__field">
+              <label for="rate"> Interest Rate </label>
+              <input type="number" name="rate" id="rate" />
+              <span class="error">This field is required</span>
+            </div>
+          </div>
+          <div class="mortgage-calculator__radio-group">
+            <!-- <div class="mortgage-calculator__radio-field"> -->
+              <label for="m-type"> Mortgage Type </label>
+              <button class="radio-button">
+                <input type="radio" name="m-type" id="repayment" checked />
+                <label for="repayment" class="bold">Repayments</label>
+              </button>
+              <button class="radio-button">
+                <input type="radio" name="m-type" id="interest" />
+                <label for="interest" class="bold">Interest Only</label>
+              </button>
+            </div>
+          </div>
+        </form>
+        <button type="button">Calculate Repayments</button>
+      </div>
+      <div class="mortgage-calculator__results"></div>
+    </div>
+  </body>
+</html>
